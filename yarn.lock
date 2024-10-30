@@ -385,9 +385,9 @@ esbuild@^0.21.3:
     "@esbuild/win32-x64" "0.21.5"
 
 esm-env@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/esm-env/-/esm-env-1.1.1.tgz#d02858ce396148ecf75f298e4c320d5a929b4015"
-  integrity sha512-5HLucDhz5yhDlMHqEedMyD4XjyV7+4vZhUS7zXNiBdSXFrViQCIeRmf7Gcs33USDcX0aGdCH+C6ZWbxzXy3ZGg==
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/esm-env/-/esm-env-1.1.4.tgz#340c78b03ee2298d31c5b9fab9793468ede828b0"
+  integrity sha512-oO82nKPHKkzIj/hbtuDYy/JHqBHFlMIW36SDiPCVsj87ntDLcWN+sJ1erdVryd4NxODacFTsdrIE3b7IamqbOg==
 
 esrap@^1.2.2:
   version "1.2.2"
