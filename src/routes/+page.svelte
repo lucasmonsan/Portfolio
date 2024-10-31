@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Page from './../lib/containers/Page.svelte';
+	import Intro from '$lib/components/Intro.svelte';
+</script>
+
+<Page>
+	<Intro />
+	<Intro />
+</Page>
+

@@ -10,4 +10,11 @@ declare global {
 	}
 }
 
-export {};
+declare namespace svelteHTML {
+	interface HTMLAttributes<T> {
+		'on:enterViewport'?: () => void;
+		'on:exitViewport'?: () => void;
+	}
+}
+
+export { };
