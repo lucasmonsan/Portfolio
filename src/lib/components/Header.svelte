@@ -25,18 +25,20 @@
 		};
 	});
 
-	const goToHash = (e: MouseEvent & { currentTarget: EventTarget & HTMLButtonElement }, hash: string) => {
+	const goToHash = (e: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }, hash: string) => {
 		e.preventDefault();
 		if (currentHash !== hash) {
 			currentHash = hash;
 			goto(hash);
-			checkbox = false; // Fecha o menu ao clicar em uma opção
+			checkbox = false;
 		}
 	};
 </script>
 
 <header class={isScrolled ? 'scrolled' : ''}>
-	<h3>Monsan.</h3>
+	<a href="#Intro" id="Logo">
+		<h3>Monsan.</h3>
+	</a>
 
 	<div class="menu">
 		{#if isScrolled}
@@ -44,9 +46,9 @@
 		{/if}
 
 		<nav class={checkbox ? 'show' : ''}>
-			<button class={currentHash === '#About' ? 'link-active' : 'link-inative'} on:click={(e) => goToHash(e, '#About')}> Sobre mim </button>
-			<button class={currentHash === '#Projects' ? 'link-active' : 'link-inative'} on:click={(e) => goToHash(e, '#Projects')}> Projetos </button>
-			<button class={currentHash === '#Contact' ? 'link-active' : 'link-inative'} on:click={(e) => goToHash(e, '#Contact')}> Contato </button>
+			<a id="LinkAbout" class={currentHash === '#About' ? 'link-active' : 'link-inative'} href="#About" on:click={(e) => goToHash(e, '#About')}> Sobre mim </a>
+			<a id="LinkProjects" class={currentHash === '#Projects' ? 'link-active' : 'link-inative'} href="#Projects" on:click={(e) => goToHash(e, '#Projects')}> Projetos </a>
+			<a id="LinkContact" class={currentHash === '#Contact' ? 'link-active' : 'link-inative'} href="#Contact" on:click={(e) => goToHash(e, '#Contact')}> Contato </a>
 		</nav>
 
 		{#if isClient && window.screen.width <= 840}
@@ -118,6 +120,25 @@
 				height: calc(var(--base) * 5);
 				opacity: 1;
 			}
+		}
+	}
+
+	nav a {
+		height: 100%;
+		text-align: center;
+
+		@media (max-width: 840px) {
+			width: 100%;
+		}
+
+		&#LinkAbout {
+			min-width: calc(var(--base) * 7.5);
+		}
+		&#LinkProjects {
+			min-width: calc(var(--base) * 6.25);
+		}
+		&#LinkContact {
+			min-width: calc(var(--base) * 5.75);
 		}
 	}
 

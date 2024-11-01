@@ -1,12 +1,14 @@
 <script>
 	import { observer } from '$lib/functions/observer';
 
+	export let flexDir = 'row';
 	export let height = 'auto';
 	export let bgColor = 'var(--color-1)';
+	export let idScroll = '';
 	let visible = false;
 </script>
 
-<section use:observer on:enterViewport={() => (visible = true)} on:exitViewport={() => (visible = false)} style="height: {height}; background-color: {bgColor}" class={visible ? 'show' : ''}>
+<section id={idScroll} use:observer on:enterViewport={() => (visible = true)} on:exitViewport={() => (visible = false)} style="flex-direction: {flexDir}; height: {height}; background-color: {bgColor}" class={visible ? 'show' : ''}>
 	<slot />
 </section>
 
@@ -29,4 +31,3 @@
 		}
 	}
 </style>
-

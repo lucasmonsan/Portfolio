@@ -8,7 +8,7 @@
 	onMount(() => (isClient = true));
 </script>
 
-<Component height="100dvh" bgColor="var(--color-bg-2)">
+<Component idScroll="Intro" height="100dvh" bgColor="var(--color-bg-2)">
 	<div class="texts">
 		<p>HELLO WORLD...</p>
 		{#if isClient && window.screen.width > 840}
@@ -37,7 +37,7 @@
 
 		<div class="buttons-2">
 			<hr />
-			<button class={isClient && window.screen.width > 720 ? 'stroke-white' : 'transparent-white'}>MEU CV</button>
+			<button class={isClient && window.screen.width > 840 ? 'stroke-white' : 'transparent-white'} id="MyCV">MEU CV</button>
 		</div>
 
 		<div class="buttons-3">
@@ -139,5 +139,8 @@
 		width: calc(var(--base) * 5);
 		color: var(--color-bg);
 	}
-</style>
 
+	button#MyCV:hover {
+		border-bottom: solid 2px var(--color-1);
+	}
+</style>

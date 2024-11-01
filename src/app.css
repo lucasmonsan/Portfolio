@@ -16,7 +16,7 @@
 
 	--family-1: 'Nunito', sans-serif;
 	--family-2: 'Namdhinggo', serif;
-	--family-mono: Consolas, 'Andale Mono', Courier, 'Courier New', monospace;
+	--family-3: Consolas, 'Andale Mono', Courier, 'Courier New', monospace;
 
 	--slow: 0.5s ease-in-out;
 	--fast: 0.25s ease-in-out;
@@ -48,6 +48,10 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 html > div {
@@ -128,6 +132,28 @@ img {
 	object-fit: cover;
 }
 
+a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	appearance: none;
+	text-decoration: none;
+	color: var(--color-text-light);
+	font-family: var(--family-1);
+	font-weight: 500;
+	font-size: calc(var(--base) * 1.25);
+	letter-spacing: calc(var(--base) * 0.025);
+	transition: all var(--fast);
+
+	&.link-active,
+	&:hover {
+		color: var(--color-bg);
+		font-weight: 700;
+		font-size: calc(var(--base) * 1.25);
+		letter-spacing: calc(var(--base) * 0.025);
+	}
+}
+
 button {
 	cursor: pointer;
 	position: relative;
@@ -149,20 +175,6 @@ button {
 
 	@media (max-width: 840px) {
 		width: 100%;
-	}
-
-	&.link-inative {
-		color: var(--color-text-light);
-		font-weight: 500;
-		font-size: calc(var(--base) * 1.25);
-		letter-spacing: calc(var(--base) * 0.025);
-	}
-
-	&.link-active {
-		color: var(--color-bg);
-		font-weight: 700;
-		font-size: calc(var(--base) * 1.25);
-		letter-spacing: calc(var(--base) * 0.025);
 	}
 
 	&.transparent-white {
@@ -230,6 +242,5 @@ button {
 }
 
 svg {
-	position: absolute;
-	height: 30%;
+	height: 100%;
 }
