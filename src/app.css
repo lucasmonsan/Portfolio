@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+	--base: min(3vw, 1rem);
+
+	--z-hide: -1;
+	--z-map: 1;
+	--z-footer: 3;
+	--z-loading: 9;
+	--z-modal: 10;
+	--z-debug: 15;
+
+	--family-1: 'Public Sans', Sans-serif;
+	--family-2: 'Castoro', Serif;
+	--family-mono: Consolas, 'Andale Mono', Courier, 'Courier New', monospace;
+
+	--slow: 0.5s ease-in-out;
+	--fast: 0.25s ease-in-out;
+
+	--shadow-1: rgba(46, 46, 51, 0.25) 0px 0.5rem 1.5rem 0px;
+	--shadow-2: rgba(21, 21, 22, 0.25) 0px 0.5rem 1.5rem 0px;
+
+	--radius-1: var(--sm);
+
+	--color-bg: #fbfcfb;
+
+	--color-text: #181818;
+	--color-text-dark: hsla(0, 0%, 8%, 1);
+	--color-text-light: #767776;
+	--color-placeholder: #a5a7a5;
+
+	--color-border: rgba(0, 0, 0, 0.1);
+
+	/* color-1(#C73E1D) color-2(#2F352B) color-3(#1A1A1A) */
+	--color-1: hsla(12, 75%, 45%, 1);
+	--color-2: hsla(96, 10%, 19%, 1);
+	--color-3: hsla(0, 0%, 10%, 1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html > div {
+	display: none;
+}
+
+body {
+	width: 100%;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+}
+
